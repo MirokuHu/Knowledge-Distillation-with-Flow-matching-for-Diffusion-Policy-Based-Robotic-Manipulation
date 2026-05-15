@@ -1,0 +1,135 @@
+========== Loaded BC metadata ==========
+obs_steps: 2
+obs_dim: 23
+action_steps: 8
+action_dim: 10
+action_key: teacher_action
+best_val_loss: 0.030862741692398624
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+{
+  "policy_inference_calls": 100,
+  "policy_inference_time_mean_sec": 0.0015012980345636606,
+  "policy_inference_time_total_sec": 0.15012980345636606,
+  "test/mean_score": 0.0,
+  "test/sim_max_reward_4300000": 0.0,
+  "test/sim_max_reward_4300001": 0.0,
+  "test/sim_max_reward_4300002": 0.0,
+  "test/sim_max_reward_4300003": 0.0,
+  "test/sim_max_reward_4300004": 0.0,
+  "test/sim_max_reward_4300005": 0.0,
+  "test/sim_max_reward_4300006": 0.0,
+  "test/sim_max_reward_4300007": 0.0,
+  "test/sim_max_reward_4300008": 0.0,
+  "test/sim_max_reward_4300009": 0.0,
+  "test/sim_max_reward_4300010": 0.0,
+  "test/sim_max_reward_4300011": 0.0,
+  "test/sim_max_reward_4300012": 0.0,
+  "test/sim_max_reward_4300013": 0.0,
+  "test/sim_max_reward_4300014": 0.0,
+  "test/sim_max_reward_4300015": 0.0,
+  "test/sim_max_reward_4300016": 0.0,
+  "test/sim_max_reward_4300017": 0.0,
+  "test/sim_max_reward_4300018": 0.0,
+  "test/sim_max_reward_4300019": 0.0,
+  "test/sim_max_reward_4300020": 0.0,
+  "test/sim_max_reward_4300021": 0.0,
+  "test/sim_max_reward_4300022": 0.0,
+  "test/sim_max_reward_4300023": 0.0,
+  "test/sim_max_reward_4300024": 0.0,
+  "test/sim_max_reward_4300025": 0.0,
+  "test/sim_max_reward_4300026": 0.0,
+  "test/sim_max_reward_4300027": 0.0,
+  "test/sim_max_reward_4300028": 0.0,
+  "test/sim_max_reward_4300029": 0.0,
+  "test/sim_max_reward_4300030": 0.0,
+  "test/sim_max_reward_4300031": 0.0,
+  "test/sim_max_reward_4300032": 0.0,
+  "test/sim_max_reward_4300033": 0.0,
+  "test/sim_max_reward_4300034": 0.0,
+  "test/sim_max_reward_4300035": 0.0,
+  "test/sim_max_reward_4300036": 0.0,
+  "test/sim_max_reward_4300037": 0.0,
+  "test/sim_max_reward_4300038": 0.0,
+  "test/sim_max_reward_4300039": 0.0,
+  "test/sim_max_reward_4300040": 0.0,
+  "test/sim_max_reward_4300041": 0.0,
+  "test/sim_max_reward_4300042": 0.0,
+  "test/sim_max_reward_4300043": 0.0,
+  "test/sim_max_reward_4300044": 0.0,
+  "test/sim_max_reward_4300045": 0.0,
+  "test/sim_max_reward_4300046": 0.0,
+  "test/sim_max_reward_4300047": 0.0,
+  "test/sim_max_reward_4300048": 0.0,
+  "test/sim_max_reward_4300049": 0.0,
+  "test/sim_video_4300000": "data/bc_eval_output/MLP/square_ph/teacher/e30_b256/media/jp4zow1c.mp4",
+  "test/sim_video_4300001": "data/bc_eval_output/MLP/square_ph/teacher/e30_b256/media/iypy5c2w.mp4",
+  "test/sim_video_4300002": "data/bc_eval_output/MLP/square_ph/teacher/e30_b256/media/veb9mdow.mp4",
+  "test/sim_video_4300003": "data/bc_eval_output/MLP/square_ph/teacher/e30_b256/media/3gdra7o4.mp4",
+  "total_eval_time_sec": 47.20164813101292,
+  "train/mean_score": 0.0,
+  "train/sim_max_reward_0": 0.0,
+  "train/sim_max_reward_1": 0.0,
+  "train/sim_max_reward_2": 0.0,
+  "train/sim_max_reward_3": 0.0,
+  "train/sim_max_reward_4": 0.0,
+  "train/sim_max_reward_5": 0.0,
+  "train/sim_video_0": "data/bc_eval_output/MLP/square_ph/teacher/e30_b256/media/je83u81v.mp4",
+  "train/sim_video_1": "data/bc_eval_output/MLP/square_ph/teacher/e30_b256/media/90b47432.mp4"
+}

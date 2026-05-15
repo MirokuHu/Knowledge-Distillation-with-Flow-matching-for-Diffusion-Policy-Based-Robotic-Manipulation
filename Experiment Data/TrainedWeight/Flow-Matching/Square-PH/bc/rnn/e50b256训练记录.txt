@@ -1,0 +1,116 @@
+========== Flow Matching Training ==========
+data_path: data/DataForTraining/Square-PH/teacher_samples.pt
+save_path: data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+prior_type: bc
+bc_model: data/TrainedWeight/BC/square_ph/teacher/bc_rnn_e50_b256.pt
+source_std: 1.0
+action_key: teacher_action
+epochs: 50
+batch_size: 256
+lr: 0.0001
+
+========== Auto-detected Shape ==========
+obs: (2, 23)
+target_action: (8, 10)
+dataset length: 28150
+
+========== Flow Model ==========
+FlowMLPPolicy(
+  (net): Sequential(
+    (0): Linear(in_features=190, out_features=512, bias=True)
+    (1): SiLU()
+    (2): Linear(in_features=512, out_features=512, bias=True)
+    (3): SiLU()
+    (4): Linear(in_features=512, out_features=512, bias=True)
+    (5): SiLU()
+    (6): Linear(in_features=512, out_features=80, bias=True)
+  )
+)
+trainable parameters: 664144
+model_kwargs: {
+  "hidden_dim": 512,
+  "time_embed_dim": 64
+}
+epoch 000 | train_loss 0.987353 | val_loss 0.899020
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 001 | train_loss 0.683594 | val_loss 0.581916
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 002 | train_loss 0.522577 | val_loss 0.486127
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 003 | train_loss 0.444141 | val_loss 0.412957
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 004 | train_loss 0.393294 | val_loss 0.371219
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 005 | train_loss 0.357249 | val_loss 0.345306
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 006 | train_loss 0.331167 | val_loss 0.317848
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 007 | train_loss 0.313624 | val_loss 0.322148
+epoch 008 | train_loss 0.308064 | val_loss 0.308465
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 009 | train_loss 0.299687 | val_loss 0.303366
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 010 | train_loss 0.296557 | val_loss 0.285732
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 011 | train_loss 0.292576 | val_loss 0.294788
+epoch 012 | train_loss 0.284959 | val_loss 0.288759
+epoch 013 | train_loss 0.284985 | val_loss 0.284866
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 014 | train_loss 0.283464 | val_loss 0.278041
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 015 | train_loss 0.279156 | val_loss 0.277918
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 016 | train_loss 0.277171 | val_loss 0.269467
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 017 | train_loss 0.269658 | val_loss 0.276868
+epoch 018 | train_loss 0.263406 | val_loss 0.264083
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 019 | train_loss 0.259947 | val_loss 0.258848
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 020 | train_loss 0.254280 | val_loss 0.248500
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 021 | train_loss 0.245923 | val_loss 0.232167
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 022 | train_loss 0.237752 | val_loss 0.237659
+epoch 023 | train_loss 0.230266 | val_loss 0.231296
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 024 | train_loss 0.228358 | val_loss 0.216394
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 025 | train_loss 0.221011 | val_loss 0.217748
+epoch 026 | train_loss 0.214027 | val_loss 0.217124
+epoch 027 | train_loss 0.210658 | val_loss 0.207253
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 028 | train_loss 0.205644 | val_loss 0.207874
+epoch 029 | train_loss 0.199912 | val_loss 0.204700
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 030 | train_loss 0.201083 | val_loss 0.199950
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 031 | train_loss 0.200142 | val_loss 0.202433
+epoch 032 | train_loss 0.196651 | val_loss 0.198415
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 033 | train_loss 0.194134 | val_loss 0.204883
+epoch 034 | train_loss 0.194037 | val_loss 0.204268
+epoch 035 | train_loss 0.194772 | val_loss 0.189874
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 036 | train_loss 0.190274 | val_loss 0.200975
+epoch 037 | train_loss 0.189633 | val_loss 0.191262
+epoch 038 | train_loss 0.194174 | val_loss 0.195343
+epoch 039 | train_loss 0.189798 | val_loss 0.197267
+epoch 040 | train_loss 0.189632 | val_loss 0.196222
+epoch 041 | train_loss 0.188320 | val_loss 0.190086
+epoch 042 | train_loss 0.188886 | val_loss 0.189769
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 043 | train_loss 0.188454 | val_loss 0.186587
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 044 | train_loss 0.187983 | val_loss 0.191477
+epoch 045 | train_loss 0.187200 | val_loss 0.188779
+epoch 046 | train_loss 0.183645 | val_loss 0.184583
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 047 | train_loss 0.178814 | val_loss 0.186448
+epoch 048 | train_loss 0.183081 | val_loss 0.183783
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+epoch 049 | train_loss 0.180918 | val_loss 0.179046
+saved best model to data/TrainedWeight/FM/square_ph/rnn-bc/fm_e50_b256_bc.pt
+
+training done.
+best_val_loss: 0.1790463676249367

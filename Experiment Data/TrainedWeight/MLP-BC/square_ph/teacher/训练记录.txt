@@ -1,0 +1,76 @@
+========== Train MLP-BC ==========
+data_path: data/DataForTraining/Square-PH/teacher_samples.pt
+save_path: data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+action_key: teacher_action
+epochs: 30
+batch_size: 256
+lr: 0.0001
+========== Auto-detected shape ==========
+obs shape: torch.Size([2, 23])
+action shape: torch.Size([8, 10])
+obs_steps: 2
+obs_dim: 23
+action_steps: 8
+action_dim: 10
+epoch 000 | train_loss 0.291246 | val_loss 0.198017
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 001 | train_loss 0.147991 | val_loss 0.113117
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 002 | train_loss 0.097031 | val_loss 0.083454
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 003 | train_loss 0.076117 | val_loss 0.071465
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 004 | train_loss 0.066876 | val_loss 0.064336
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 005 | train_loss 0.060538 | val_loss 0.059129
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 006 | train_loss 0.055843 | val_loss 0.055283
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 007 | train_loss 0.052389 | val_loss 0.052477
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 008 | train_loss 0.049578 | val_loss 0.049766
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 009 | train_loss 0.047151 | val_loss 0.047510
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 010 | train_loss 0.045020 | val_loss 0.045451
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 011 | train_loss 0.043009 | val_loss 0.043500
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 012 | train_loss 0.041175 | val_loss 0.041777
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 013 | train_loss 0.039629 | val_loss 0.040085
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 014 | train_loss 0.038219 | val_loss 0.038861
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 015 | train_loss 0.037010 | val_loss 0.037693
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 016 | train_loss 0.036070 | val_loss 0.036567
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 017 | train_loss 0.035173 | val_loss 0.035921
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 018 | train_loss 0.034476 | val_loss 0.034948
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 019 | train_loss 0.033836 | val_loss 0.034377
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 020 | train_loss 0.033351 | val_loss 0.033927
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 021 | train_loss 0.032823 | val_loss 0.033496
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 022 | train_loss 0.032473 | val_loss 0.032976
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 023 | train_loss 0.032091 | val_loss 0.032541
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 024 | train_loss 0.031742 | val_loss 0.032315
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 025 | train_loss 0.031366 | val_loss 0.031818
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 026 | train_loss 0.031327 | val_loss 0.031638
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 027 | train_loss 0.030883 | val_loss 0.031456
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 028 | train_loss 0.030581 | val_loss 0.031199
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+epoch 029 | train_loss 0.030364 | val_loss 0.030863
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_mlp_e30_b256.pt
+training done.
+best_val_loss: 0.030862741692398624

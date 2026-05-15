@@ -1,0 +1,109 @@
+========== Flow Matching Training ==========
+data_path: data/DataForTraining/Push-T/teacher_samples.pt
+save_path: data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+prior_type: bc
+bc_model: data/TrainedWeight/BC/pusht/teacher/bc_transformer_e50_b256.pt
+source_std: 1.0
+action_key: teacher_action
+epochs: 50
+batch_size: 256
+lr: 0.0001
+
+========== Auto-detected Shape ==========
+obs: (2, 20)
+target_action: (8, 2)
+dataset length: 10726
+/root/miniconda3/envs/robodiff/lib/python3.9/site-packages/torch/nn/modules/transformer.py:282: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(f"enable_nested_tensor is True, but self.use_nested_tensor is False because {why_not_sparsity_fast_path}")
+
+========== Flow Model ==========
+FlowMLPPolicy(
+  (net): Sequential(
+    (0): Linear(in_features=120, out_features=512, bias=True)
+    (1): SiLU()
+    (2): Linear(in_features=512, out_features=512, bias=True)
+    (3): SiLU()
+    (4): Linear(in_features=512, out_features=512, bias=True)
+    (5): SiLU()
+    (6): Linear(in_features=512, out_features=16, bias=True)
+  )
+)
+trainable parameters: 595472
+model_kwargs: {
+  "hidden_dim": 512,
+  "time_embed_dim": 64
+}
+epoch 000 | train_loss 1583.198945 | val_loss 1496.374958
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 001 | train_loss 1410.010600 | val_loss 1321.091152
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 002 | train_loss 1199.931796 | val_loss 1043.184589
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 003 | train_loss 937.920048 | val_loss 792.003684
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 004 | train_loss 765.619476 | val_loss 695.494673
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 005 | train_loss 698.921440 | val_loss 664.825019
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 006 | train_loss 664.153018 | val_loss 656.650176
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 007 | train_loss 646.228464 | val_loss 647.988274
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 008 | train_loss 640.086369 | val_loss 635.945732
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 009 | train_loss 620.992091 | val_loss 615.848766
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 010 | train_loss 616.024828 | val_loss 554.965279
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 011 | train_loss 620.946101 | val_loss 606.669438
+epoch 012 | train_loss 588.086717 | val_loss 579.391766
+epoch 013 | train_loss 608.538012 | val_loss 573.514167
+epoch 014 | train_loss 590.801615 | val_loss 572.071364
+epoch 015 | train_loss 563.117130 | val_loss 559.275318
+epoch 016 | train_loss 572.678831 | val_loss 541.657601
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 017 | train_loss 553.888448 | val_loss 552.106173
+epoch 018 | train_loss 546.901180 | val_loss 582.990053
+epoch 019 | train_loss 543.273289 | val_loss 507.806416
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 020 | train_loss 530.773944 | val_loss 549.034364
+epoch 021 | train_loss 524.512841 | val_loss 507.739919
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 022 | train_loss 531.400411 | val_loss 539.474494
+epoch 023 | train_loss 524.375787 | val_loss 470.898084
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 024 | train_loss 506.630207 | val_loss 489.815067
+epoch 025 | train_loss 515.415809 | val_loss 487.113204
+epoch 026 | train_loss 505.270338 | val_loss 484.401867
+epoch 027 | train_loss 512.550531 | val_loss 505.365065
+epoch 028 | train_loss 496.149229 | val_loss 474.542067
+epoch 029 | train_loss 499.606062 | val_loss 537.775443
+epoch 030 | train_loss 493.591206 | val_loss 534.680165
+epoch 031 | train_loss 484.077257 | val_loss 482.720277
+epoch 032 | train_loss 483.899905 | val_loss 491.190657
+epoch 033 | train_loss 476.328932 | val_loss 535.167618
+epoch 034 | train_loss 476.363157 | val_loss 452.353914
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 035 | train_loss 460.131535 | val_loss 474.234151
+epoch 036 | train_loss 452.862001 | val_loss 449.668700
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 037 | train_loss 449.466220 | val_loss 423.242451
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 038 | train_loss 444.213415 | val_loss 458.369081
+epoch 039 | train_loss 440.119652 | val_loss 429.661916
+epoch 040 | train_loss 442.714741 | val_loss 433.405887
+epoch 041 | train_loss 447.455644 | val_loss 405.266533
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 042 | train_loss 417.742728 | val_loss 443.432718
+epoch 043 | train_loss 430.500511 | val_loss 446.185861
+epoch 044 | train_loss 410.148290 | val_loss 419.152246
+epoch 045 | train_loss 423.738462 | val_loss 447.202242
+epoch 046 | train_loss 409.541244 | val_loss 399.120685
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 047 | train_loss 407.321647 | val_loss 379.193925
+saved best model to data/TrainedWeight/FM/pusht/transformer-bc/fm_e50_b256_bc.pt
+epoch 048 | train_loss 421.611929 | val_loss 408.047470
+epoch 049 | train_loss 405.680872 | val_loss 394.761302
+
+training done.
+best_val_loss: 379.1939246334247

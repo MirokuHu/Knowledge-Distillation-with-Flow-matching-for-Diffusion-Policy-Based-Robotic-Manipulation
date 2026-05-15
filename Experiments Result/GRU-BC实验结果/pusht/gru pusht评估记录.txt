@@ -1,0 +1,91 @@
+========== Loaded Student Checkpoint ==========
+student_model: data/TrainedWeight/BC/pusht/teacher/bc_rnn_e50_b256.pt
+model_type: rnn
+obs_steps: 2
+obs_dim: 20
+action_steps: 8
+action_dim: 2
+action_key: teacher_action
+best_val_loss: 2228.558396979944
+model_kwargs: {
+  "hidden_dim": 256,
+  "num_layers": 2,
+  "dropout": 0.0
+}
+pygame 2.1.2 (SDL 2.0.16, Python 3.9.25)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+{
+  "policy_inference_calls": 38,
+  "policy_inference_time_mean_sec": 0.002012171782553196,
+  "policy_inference_time_total_sec": 0.07646252773702145,
+  "student_action_key": "teacher_action",
+  "student_best_val_loss": 2228.558396979944,
+  "student_model_path": "data/TrainedWeight/BC/pusht/teacher/bc_rnn_e50_b256.pt",
+  "student_model_type": "rnn",
+  "student_n_params": 865296,
+  "test/mean_score": 0.10168827479066479,
+  "test/sim_max_reward_4300000": 0.0,
+  "test/sim_max_reward_4300001": 0.0,
+  "test/sim_max_reward_4300002": 0.17403636649123597,
+  "test/sim_max_reward_4300003": 0.27937153809368176,
+  "test/sim_max_reward_4300004": 0.16377799761799694,
+  "test/sim_max_reward_4300005": 0.1540320855796819,
+  "test/sim_max_reward_4300006": 0.0,
+  "test/sim_max_reward_4300007": 0.045127646075307386,
+  "test/sim_max_reward_4300008": 0.0,
+  "test/sim_max_reward_4300009": 0.00022323700018118755,
+  "test/sim_max_reward_4300010": 0.0,
+  "test/sim_max_reward_4300011": 0.2488062815272076,
+  "test/sim_max_reward_4300012": 0.16123959756641626,
+  "test/sim_max_reward_4300013": 0.3087005263470075,
+  "test/sim_max_reward_4300014": 0.09774428935694213,
+  "test/sim_max_reward_4300015": 0.26222415293594203,
+  "test/sim_max_reward_4300016": 0.0,
+  "test/sim_max_reward_4300017": 0.007102060581253713,
+  "test/sim_max_reward_4300018": 0.0,
+  "test/sim_max_reward_4300019": 0.18194235475651632,
+  "test/sim_max_reward_4300020": 0.0,
+  "test/sim_max_reward_4300021": 0.0826787213378552,
+  "test/sim_max_reward_4300022": 0.33058524203494144,
+  "test/sim_max_reward_4300023": 0.2057529789273333,
+  "test/sim_max_reward_4300024": 0.0,
+  "test/sim_max_reward_4300025": 0.09176543721660588,
+  "test/sim_max_reward_4300026": 0.1758886010086048,
+  "test/sim_max_reward_4300027": 0.0,
+  "test/sim_max_reward_4300028": 0.0,
+  "test/sim_max_reward_4300029": 0.0,
+  "test/sim_max_reward_4300030": 0.0,
+  "test/sim_max_reward_4300031": 0.0,
+  "test/sim_max_reward_4300032": 0.19710987105886973,
+  "test/sim_max_reward_4300033": 0.2603000335592396,
+  "test/sim_max_reward_4300034": 0.0,
+  "test/sim_max_reward_4300035": 0.0,
+  "test/sim_max_reward_4300036": 0.199194115563479,
+  "test/sim_max_reward_4300037": 0.5527122599440878,
+  "test/sim_max_reward_4300038": 0.0,
+  "test/sim_max_reward_4300039": 0.0,
+  "test/sim_max_reward_4300040": 0.0,
+  "test/sim_max_reward_4300041": 0.0,
+  "test/sim_max_reward_4300042": 0.4845634530216516,
+  "test/sim_max_reward_4300043": 0.10401693137518356,
+  "test/sim_max_reward_4300044": 0.04345707006804553,
+  "test/sim_max_reward_4300045": 0.0,
+  "test/sim_max_reward_4300046": 0.0,
+  "test/sim_max_reward_4300047": 0.2720608904879717,
+  "test/sim_max_reward_4300048": 0.0,
+  "test/sim_max_reward_4300049": 0.0,
+  "test/sim_video_4300000": "data/bc_eval_output/RNN/pusht/teacher/bc_rnn_e50_b256/media/gqlwl8d5.mp4",
+  "test/sim_video_4300001": "data/bc_eval_output/RNN/pusht/teacher/bc_rnn_e50_b256/media/ocui6nia.mp4",
+  "test/sim_video_4300002": "data/bc_eval_output/RNN/pusht/teacher/bc_rnn_e50_b256/media/f3vs1t8d.mp4",
+  "test/sim_video_4300003": "data/bc_eval_output/RNN/pusht/teacher/bc_rnn_e50_b256/media/v49pghop.mp4",
+  "total_eval_time_sec": 1.3467748556286097,
+  "train/mean_score": 0.06646797410583478,
+  "train/sim_max_reward_0": 0.19029749660605202,
+  "train/sim_max_reward_1": 0.0006754812217992413,
+  "train/sim_max_reward_2": 0.0,
+  "train/sim_max_reward_3": 0.0053467998742405525,
+  "train/sim_max_reward_4": 0.009503307570729362,
+  "train/sim_max_reward_5": 0.19298475936218748,
+  "train/sim_video_0": "data/bc_eval_output/RNN/pusht/teacher/bc_rnn_e50_b256/media/gtaen23q.mp4",
+  "train/sim_video_1": "data/bc_eval_output/RNN/pusht/teacher/bc_rnn_e50_b256/media/11w5dhot.mp4"
+}

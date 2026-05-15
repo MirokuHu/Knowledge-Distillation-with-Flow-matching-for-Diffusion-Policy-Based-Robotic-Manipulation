@@ -1,0 +1,152 @@
+========== Loaded Student Checkpoint ==========
+student_model: data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt
+model_type: transformer
+obs_steps: 2
+obs_dim: 23
+action_steps: 8
+action_dim: 10
+action_key: teacher_action
+best_val_loss: 0.015218260008213151
+model_kwargs: {
+  "d_model": 128,
+  "nhead": 4,
+  "num_layers": 2,
+  "dim_feedforward": 512,
+  "dropout": 0.0,
+  "pooling": "last"
+}
+/root/miniconda3/envs/robodiff/lib/python3.9/site-packages/torch/nn/modules/transformer.py:282: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(f"enable_nested_tensor is True, but self.use_nested_tensor is False because {why_not_sparsity_fast_path}")
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+Created environment with name NutAssemblySquare
+Action size is 7
+{
+  "policy_inference_calls": 100,
+  "policy_inference_time_mean_sec": 0.0023635788075625896,
+  "policy_inference_time_total_sec": 0.23635788075625896,
+  "student_action_key": "teacher_action",
+  "student_best_val_loss": 0.015218260008213151,
+  "student_model_path": "data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt",
+  "student_model_type": "transformer",
+  "student_n_params": 507216,
+  "test/mean_score": 0.24,
+  "test/sim_max_reward_4300000": 1.0,
+  "test/sim_max_reward_4300001": 0.0,
+  "test/sim_max_reward_4300002": 0.0,
+  "test/sim_max_reward_4300003": 1.0,
+  "test/sim_max_reward_4300004": 0.0,
+  "test/sim_max_reward_4300005": 0.0,
+  "test/sim_max_reward_4300006": 0.0,
+  "test/sim_max_reward_4300007": 0.0,
+  "test/sim_max_reward_4300008": 0.0,
+  "test/sim_max_reward_4300009": 0.0,
+  "test/sim_max_reward_4300010": 0.0,
+  "test/sim_max_reward_4300011": 0.0,
+  "test/sim_max_reward_4300012": 0.0,
+  "test/sim_max_reward_4300013": 1.0,
+  "test/sim_max_reward_4300014": 1.0,
+  "test/sim_max_reward_4300015": 0.0,
+  "test/sim_max_reward_4300016": 0.0,
+  "test/sim_max_reward_4300017": 0.0,
+  "test/sim_max_reward_4300018": 0.0,
+  "test/sim_max_reward_4300019": 0.0,
+  "test/sim_max_reward_4300020": 0.0,
+  "test/sim_max_reward_4300021": 0.0,
+  "test/sim_max_reward_4300022": 0.0,
+  "test/sim_max_reward_4300023": 1.0,
+  "test/sim_max_reward_4300024": 0.0,
+  "test/sim_max_reward_4300025": 0.0,
+  "test/sim_max_reward_4300026": 1.0,
+  "test/sim_max_reward_4300027": 1.0,
+  "test/sim_max_reward_4300028": 1.0,
+  "test/sim_max_reward_4300029": 0.0,
+  "test/sim_max_reward_4300030": 0.0,
+  "test/sim_max_reward_4300031": 1.0,
+  "test/sim_max_reward_4300032": 0.0,
+  "test/sim_max_reward_4300033": 0.0,
+  "test/sim_max_reward_4300034": 0.0,
+  "test/sim_max_reward_4300035": 0.0,
+  "test/sim_max_reward_4300036": 0.0,
+  "test/sim_max_reward_4300037": 1.0,
+  "test/sim_max_reward_4300038": 1.0,
+  "test/sim_max_reward_4300039": 0.0,
+  "test/sim_max_reward_4300040": 0.0,
+  "test/sim_max_reward_4300041": 0.0,
+  "test/sim_max_reward_4300042": 0.0,
+  "test/sim_max_reward_4300043": 0.0,
+  "test/sim_max_reward_4300044": 0.0,
+  "test/sim_max_reward_4300045": 0.0,
+  "test/sim_max_reward_4300046": 0.0,
+  "test/sim_max_reward_4300047": 1.0,
+  "test/sim_max_reward_4300048": 0.0,
+  "test/sim_max_reward_4300049": 0.0,
+  "test/sim_video_4300000": "data/bc_eval_output/Transformer/square_ph/teacher/bc_transformer_e50_b256/media/u2c6ws60.mp4",
+  "test/sim_video_4300001": "data/bc_eval_output/Transformer/square_ph/teacher/bc_transformer_e50_b256/media/6pxyl2qk.mp4",
+  "test/sim_video_4300002": "data/bc_eval_output/Transformer/square_ph/teacher/bc_transformer_e50_b256/media/q1zi7zyt.mp4",
+  "test/sim_video_4300003": "data/bc_eval_output/Transformer/square_ph/teacher/bc_transformer_e50_b256/media/j0fz2emp.mp4",
+  "total_eval_time_sec": 35.355319587513804,
+  "train/mean_score": 0.0,
+  "train/sim_max_reward_0": 0.0,
+  "train/sim_max_reward_1": 0.0,
+  "train/sim_max_reward_2": 0.0,
+  "train/sim_max_reward_3": 0.0,
+  "train/sim_max_reward_4": 0.0,
+  "train/sim_max_reward_5": 0.0,
+  "train/sim_video_0": "data/bc_eval_output/Transformer/square_ph/teacher/bc_transformer_e50_b256/media/55jwwkmr.mp4",
+  "train/sim_video_1": "data/bc_eval_output/Transformer/square_ph/teacher/bc_transformer_e50_b256/media/uj28zc72.mp4"
+}

@@ -1,0 +1,146 @@
+========== Loaded Student Checkpoint ==========
+student_model: data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+model_type: rnn
+obs_steps: 2
+obs_dim: 19
+action_steps: 8
+action_dim: 10
+action_key: teacher_action
+best_val_loss: 0.017332194050321523
+model_kwargs: {
+  "hidden_dim": 256,
+  "num_layers": 2,
+  "dropout": 0.0
+}
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+Created environment with name Lift
+Action size is 7
+{
+  "policy_inference_calls": 100,
+  "policy_inference_time_mean_sec": 0.0018202813155949115,
+  "policy_inference_time_total_sec": 0.18202813155949116,
+  "student_action_key": "teacher_action",
+  "student_best_val_loss": 0.017332194050321523,
+  "student_model_path": "data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt",
+  "student_model_type": "rnn",
+  "student_n_params": 881488,
+  "test/mean_score": 0.76,
+  "test/sim_max_reward_4300000": 1.0,
+  "test/sim_max_reward_4300001": 0.0,
+  "test/sim_max_reward_4300002": 1.0,
+  "test/sim_max_reward_4300003": 1.0,
+  "test/sim_max_reward_4300004": 1.0,
+  "test/sim_max_reward_4300005": 1.0,
+  "test/sim_max_reward_4300006": 0.0,
+  "test/sim_max_reward_4300007": 0.0,
+  "test/sim_max_reward_4300008": 1.0,
+  "test/sim_max_reward_4300009": 1.0,
+  "test/sim_max_reward_4300010": 1.0,
+  "test/sim_max_reward_4300011": 1.0,
+  "test/sim_max_reward_4300012": 1.0,
+  "test/sim_max_reward_4300013": 0.0,
+  "test/sim_max_reward_4300014": 1.0,
+  "test/sim_max_reward_4300015": 1.0,
+  "test/sim_max_reward_4300016": 1.0,
+  "test/sim_max_reward_4300017": 0.0,
+  "test/sim_max_reward_4300018": 1.0,
+  "test/sim_max_reward_4300019": 1.0,
+  "test/sim_max_reward_4300020": 1.0,
+  "test/sim_max_reward_4300021": 1.0,
+  "test/sim_max_reward_4300022": 0.0,
+  "test/sim_max_reward_4300023": 1.0,
+  "test/sim_max_reward_4300024": 1.0,
+  "test/sim_max_reward_4300025": 1.0,
+  "test/sim_max_reward_4300026": 0.0,
+  "test/sim_max_reward_4300027": 1.0,
+  "test/sim_max_reward_4300028": 0.0,
+  "test/sim_max_reward_4300029": 1.0,
+  "test/sim_max_reward_4300030": 1.0,
+  "test/sim_max_reward_4300031": 0.0,
+  "test/sim_max_reward_4300032": 1.0,
+  "test/sim_max_reward_4300033": 1.0,
+  "test/sim_max_reward_4300034": 0.0,
+  "test/sim_max_reward_4300035": 1.0,
+  "test/sim_max_reward_4300036": 1.0,
+  "test/sim_max_reward_4300037": 1.0,
+  "test/sim_max_reward_4300038": 1.0,
+  "test/sim_max_reward_4300039": 1.0,
+  "test/sim_max_reward_4300040": 1.0,
+  "test/sim_max_reward_4300041": 0.0,
+  "test/sim_max_reward_4300042": 1.0,
+  "test/sim_max_reward_4300043": 1.0,
+  "test/sim_max_reward_4300044": 1.0,
+  "test/sim_max_reward_4300045": 1.0,
+  "test/sim_max_reward_4300046": 1.0,
+  "test/sim_max_reward_4300047": 1.0,
+  "test/sim_max_reward_4300048": 0.0,
+  "test/sim_max_reward_4300049": 1.0,
+  "test/sim_video_4300000": "data/bc_eval_output/RNN/lift_ph/teacher/bc_rnn_e50_b256/media/f6r27oly.mp4",
+  "test/sim_video_4300001": "data/bc_eval_output/RNN/lift_ph/teacher/bc_rnn_e50_b256/media/vp35cc7q.mp4",
+  "test/sim_video_4300002": "data/bc_eval_output/RNN/lift_ph/teacher/bc_rnn_e50_b256/media/eofz8gtv.mp4",
+  "total_eval_time_sec": 34.66158980876207,
+  "train/mean_score": 0.8333333333333334,
+  "train/sim_max_reward_0": 1.0,
+  "train/sim_max_reward_1": 1.0,
+  "train/sim_max_reward_2": 1.0,
+  "train/sim_max_reward_3": 1.0,
+  "train/sim_max_reward_4": 1.0,
+  "train/sim_max_reward_5": 0.0,
+  "train/sim_video_0": "data/bc_eval_output/RNN/lift_ph/teacher/bc_rnn_e50_b256/media/1dnlsmnd.mp4",
+  "train/sim_video_1": "data/bc_eval_output/RNN/lift_ph/teacher/bc_rnn_e50_b256/media/hcw54dub.mp4"
+}

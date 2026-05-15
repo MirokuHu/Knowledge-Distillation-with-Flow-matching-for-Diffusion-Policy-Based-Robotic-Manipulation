@@ -1,0 +1,115 @@
+========== Student BC Training ==========
+model_type: rnn
+data_path: data/DataForTraining/Lift-PH/teacher_samples.pt
+save_path: data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+device: cuda:0
+action_key: teacher_action
+epochs: 50
+batch_size: 256
+lr: 0.0001
+
+========== Auto-detected Shape ==========
+obs shape: (2, 19)
+action shape: (8, 10)
+obs_steps: 2
+obs_dim: 19
+action_steps: 8
+action_dim: 10
+dataset length: 8118
+
+========== Model ==========
+RNNBCPolicy(
+  (input_proj): Linear(in_features=19, out_features=256, bias=True)
+  (rnn): GRU(256, 256, num_layers=2, batch_first=True)
+  (head): Sequential(
+    (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (1): Linear(in_features=256, out_features=256, bias=True)
+    (2): ReLU()
+    (3): Linear(in_features=256, out_features=80, bias=True)
+  )
+)
+trainable parameters: 881488
+model_kwargs: {
+  "hidden_dim": 256,
+  "num_layers": 2,
+  "dropout": 0.0
+}
+epoch 000 | train_loss 0.240826 | val_loss 0.119089
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 001 | train_loss 0.095416 | val_loss 0.087160
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 002 | train_loss 0.085974 | val_loss 0.083388
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 003 | train_loss 0.080882 | val_loss 0.075863
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 004 | train_loss 0.067980 | val_loss 0.056345
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 005 | train_loss 0.047560 | val_loss 0.039704
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 006 | train_loss 0.036544 | val_loss 0.030867
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 007 | train_loss 0.029699 | val_loss 0.025673
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 008 | train_loss 0.025843 | val_loss 0.024687
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 009 | train_loss 0.024210 | val_loss 0.021996
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 010 | train_loss 0.022434 | val_loss 0.020871
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 011 | train_loss 0.021940 | val_loss 0.020258
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 012 | train_loss 0.021440 | val_loss 0.021159
+epoch 013 | train_loss 0.021525 | val_loss 0.021159
+epoch 014 | train_loss 0.021326 | val_loss 0.019529
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 015 | train_loss 0.020784 | val_loss 0.019252
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 016 | train_loss 0.020882 | val_loss 0.018992
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 017 | train_loss 0.020117 | val_loss 0.018850
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 018 | train_loss 0.020135 | val_loss 0.018766
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 019 | train_loss 0.019785 | val_loss 0.018473
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 020 | train_loss 0.019568 | val_loss 0.018716
+epoch 021 | train_loss 0.019734 | val_loss 0.018397
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 022 | train_loss 0.019646 | val_loss 0.019641
+epoch 023 | train_loss 0.019923 | val_loss 0.018556
+epoch 024 | train_loss 0.019451 | val_loss 0.018894
+epoch 025 | train_loss 0.019333 | val_loss 0.018015
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 026 | train_loss 0.019160 | val_loss 0.018021
+epoch 027 | train_loss 0.018866 | val_loss 0.018176
+epoch 028 | train_loss 0.019553 | val_loss 0.018102
+epoch 029 | train_loss 0.019592 | val_loss 0.019085
+epoch 030 | train_loss 0.019913 | val_loss 0.018071
+epoch 031 | train_loss 0.019045 | val_loss 0.017795
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 032 | train_loss 0.019380 | val_loss 0.017768
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 033 | train_loss 0.018814 | val_loss 0.018130
+epoch 034 | train_loss 0.019164 | val_loss 0.017738
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 035 | train_loss 0.018985 | val_loss 0.017524
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 036 | train_loss 0.018940 | val_loss 0.020335
+epoch 037 | train_loss 0.019237 | val_loss 0.021110
+epoch 038 | train_loss 0.019666 | val_loss 0.018903
+epoch 039 | train_loss 0.018800 | val_loss 0.018186
+epoch 040 | train_loss 0.018822 | val_loss 0.018865
+epoch 041 | train_loss 0.019054 | val_loss 0.017515
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 042 | train_loss 0.018516 | val_loss 0.018314
+epoch 043 | train_loss 0.018942 | val_loss 0.019761
+epoch 044 | train_loss 0.019619 | val_loss 0.018440
+epoch 045 | train_loss 0.018927 | val_loss 0.018119
+epoch 046 | train_loss 0.018895 | val_loss 0.017839
+epoch 047 | train_loss 0.018368 | val_loss 0.017332
+saved best model to data/TrainedWeight/BC/lift_ph/teacher/bc_rnn_e50_b256.pt
+epoch 048 | train_loss 0.019030 | val_loss 0.018987
+epoch 049 | train_loss 0.018759 | val_loss 0.017507
+
+training done.
+best_val_loss: 0.017332194050321523

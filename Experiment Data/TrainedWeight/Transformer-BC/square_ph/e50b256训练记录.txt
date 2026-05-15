@@ -1,0 +1,125 @@
+========== Student BC Training ==========
+model_type: transformer
+data_path: data/DataForTraining/Square-PH/teacher_samples.pt
+save_path: data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt
+device: cuda:0
+action_key: teacher_action
+epochs: 50
+batch_size: 256
+lr: 0.0001
+
+========== Auto-detected Shape ==========
+obs shape: (2, 23)
+action shape: (8, 10)
+obs_steps: 2
+obs_dim: 23
+action_steps: 8
+action_dim: 10
+dataset length: 28150
+/root/miniconda3/envs/robodiff/lib/python3.9/site-packages/torch/nn/modules/transformer.py:282: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(f"enable_nested_tensor is True, but self.use_nested_tensor is False because {why_not_sparsity_fast_path}")
+
+========== Model ==========
+TransformerBCPolicy(
+  (input_proj): Linear(in_features=23, out_features=128, bias=True)
+  (encoder): TransformerEncoder(
+    (layers): ModuleList(
+      (0-1): 2 x TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)
+        )
+        (linear1): Linear(in_features=128, out_features=512, bias=True)
+        (dropout): Dropout(p=0.0, inplace=False)
+        (linear2): Linear(in_features=512, out_features=128, bias=True)
+        (norm1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (norm2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (dropout1): Dropout(p=0.0, inplace=False)
+        (dropout2): Dropout(p=0.0, inplace=False)
+      )
+    )
+  )
+  (head): Sequential(
+    (0): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+    (1): Linear(in_features=128, out_features=512, bias=True)
+    (2): GELU(approximate='none')
+    (3): Linear(in_features=512, out_features=80, bias=True)
+  )
+)
+trainable parameters: 507216
+model_kwargs: {
+  "d_model": 128,
+  "nhead": 4,
+  "num_layers": 2,
+  "dim_feedforward": 512,
+  "dropout": 0.0,
+  "pooling": "last"
+}
+epoch 000 | train_loss 0.139662 | val_loss 0.064171
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt
+epoch 001 | train_loss 0.053952 | val_loss 0.048863
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt
+epoch 002 | train_loss 0.043182 | val_loss 0.040774
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt
+epoch 003 | train_loss 0.035353 | val_loss 0.033070
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt
+epoch 004 | train_loss 0.031137 | val_loss 0.030484
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt
+epoch 005 | train_loss 0.026963 | val_loss 0.027412
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt
+epoch 006 | train_loss 0.024527 | val_loss 0.022515
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt
+epoch 007 | train_loss 0.023054 | val_loss 0.021113
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt
+epoch 008 | train_loss 0.021288 | val_loss 0.023611
+epoch 009 | train_loss 0.020357 | val_loss 0.021241
+epoch 010 | train_loss 0.019796 | val_loss 0.021157
+epoch 011 | train_loss 0.020345 | val_loss 0.018892
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt
+epoch 012 | train_loss 0.019018 | val_loss 0.019202
+epoch 013 | train_loss 0.018854 | val_loss 0.018572
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt
+epoch 014 | train_loss 0.017573 | val_loss 0.016969
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt
+epoch 015 | train_loss 0.018896 | val_loss 0.018966
+epoch 016 | train_loss 0.017794 | val_loss 0.016580
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt
+epoch 017 | train_loss 0.018168 | val_loss 0.016866
+epoch 018 | train_loss 0.017530 | val_loss 0.018306
+epoch 019 | train_loss 0.017130 | val_loss 0.018921
+epoch 020 | train_loss 0.017524 | val_loss 0.018790
+epoch 021 | train_loss 0.016681 | val_loss 0.019990
+epoch 022 | train_loss 0.016312 | val_loss 0.016660
+epoch 023 | train_loss 0.017182 | val_loss 0.016891
+epoch 024 | train_loss 0.016076 | val_loss 0.018325
+epoch 025 | train_loss 0.017208 | val_loss 0.016074
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt
+epoch 026 | train_loss 0.016104 | val_loss 0.023541
+epoch 027 | train_loss 0.016589 | val_loss 0.019982
+epoch 028 | train_loss 0.016785 | val_loss 0.018718
+epoch 029 | train_loss 0.017326 | val_loss 0.017959
+epoch 030 | train_loss 0.015661 | val_loss 0.015933
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt
+epoch 031 | train_loss 0.016000 | val_loss 0.018594
+epoch 032 | train_loss 0.015980 | val_loss 0.017083
+epoch 033 | train_loss 0.015849 | val_loss 0.016550
+epoch 034 | train_loss 0.015493 | val_loss 0.016203
+epoch 035 | train_loss 0.015936 | val_loss 0.018192
+epoch 036 | train_loss 0.015274 | val_loss 0.016060
+epoch 037 | train_loss 0.015094 | val_loss 0.018064
+epoch 038 | train_loss 0.016068 | val_loss 0.017028
+epoch 039 | train_loss 0.015201 | val_loss 0.016369
+epoch 040 | train_loss 0.015061 | val_loss 0.016672
+epoch 041 | train_loss 0.014926 | val_loss 0.016177
+epoch 042 | train_loss 0.015028 | val_loss 0.015759
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt
+epoch 043 | train_loss 0.015173 | val_loss 0.015762
+epoch 044 | train_loss 0.015361 | val_loss 0.016257
+epoch 045 | train_loss 0.014885 | val_loss 0.016130
+epoch 046 | train_loss 0.015662 | val_loss 0.017588
+epoch 047 | train_loss 0.014957 | val_loss 0.015218
+saved best model to data/TrainedWeight/BC/square_ph/teacher/bc_transformer_e50_b256.pt
+epoch 048 | train_loss 0.014967 | val_loss 0.019690
+epoch 049 | train_loss 0.015605 | val_loss 0.015440
+
+training done.
+best_val_loss: 0.015218260008213151
