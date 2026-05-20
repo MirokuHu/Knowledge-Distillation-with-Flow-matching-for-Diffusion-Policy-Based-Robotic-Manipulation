@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Bachelor's thesis project on accelerating Diffusion Policy for robotic manipulation through teacher-student distillation and Flow Matching.">
+  <meta name="keywords" content="Diffusion Policy, robotic manipulation, imitation learning, policy distillation, Flow Matching, behavior cloning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Shizhou Hu">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Research on Diffusion Policy Distillation and Acceleration for Robotic Manipulation">
+  <meta property="og:description" content="A bachelor's thesis project on accelerating Diffusion Policy for real-time robotic manipulation.">
+  <meta property="og:image" content="static/images/social_preview.png">
+
+  <title>Diffusion Policy Distillation and Acceleration | Shizhou Hu</title>
+
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+</head>
+<body>
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+    <section class="hero publication-header">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title" data-i18n="page_title">Research on Diffusion Policy Distillation and Acceleration for Robotic Manipulation</h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Shizhou Hu</span>
+              </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block" data-i18n="institution">Dalian University of Technology<br>Bachelor's Thesis Project, 2026</span>
+              </div>
+              <div class="language-switcher">
+                <button class="lang-btn active" onclick="setLanguage('en')" id="lang-en">EN</button>
+                <button class="lang-btn" onclick="setLanguage('ja')" id="lang-ja">日本語</button>
+              </div>
+              <div class="publication-links">
+                <!--<span class="link-block">
+                  <a href="static/pdfs/thesis_summary.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span data-i18n="button_summary">Thesis Summary</span>
+                  </a>
+                </span>-->
+                <span class="link-block">
+                  <a href="https://github.com/MirokuHu/Knowledge-Distillation-with-Flow-matching-for-Diffusion-Policy-Based-Robotic-Manipulation" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span data-i18n="button_code">Repo</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#rollout-videos" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-video"></i></span>
+                    <span data-i18n="button_videos">Videos</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <h2 class="subtitle has-text-centered" data-i18n="teaser_text">
+            A teacher-student distillation framework for accelerating Diffusion Policy in robotic manipulation tasks.
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3" data-i18n="abstract_title">Abstract</h2>
+            <div class="content has-text-justified">
+              <p data-i18n="abstract_text">
+                Diffusion Policy can model complex action distributions in robotic manipulation, but its iterative denoising process introduces high inference latency. This project constructs a teacher-student distillation framework to accelerate Diffusion Policy while analyzing how much teacher behavior can be preserved. A pretrained Diffusion Policy is used as the teacher, and multiple student policies are compared, including MLP-BC, GRU-BC, Transformer-BC, and Flow Matching students. Experiments are conducted on Push-T, Lift-PH, and Square-PH. The results show that student policies reduce the average action generation latency from 682.25 ms to 2.39 ms, achieving approximately 285× speedup. However, behavior preservation remains task-dependent: GRU-BC performs best on Lift-PH, Flow Matching performs best on Push-T, and Transformer-BC performs best on Square-PH.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered" data-i18n="method_title">Method Overview</h2>
+        <div class="content has-text-justified">
+          <p data-i18n="method_text">
+            The project follows an offline teacher-student distillation pipeline. A pretrained Diffusion Policy teacher receives observation sequences and generates future action chunks. These teacher-generated actions are then recorded as distillation targets and used to train lightweight student policies. The students are evaluated through rollout performance and average predict_action latency, allowing a direct comparison between task performance and real-time efficiency.
+          </p>
+        </div>
+        <figure class="image project-figure">
+          <img class="zoomable-image" src="static/images/method_overview.svg" data-full="static/images/method_overview.svg" alt="Teacher-student distillation pipeline for Diffusion Policy">
+          <figcaption class="table-caption" data-i18n="method_caption">Overall pipeline: Diffusion Policy teacher → teacher-sample dataset → lightweight student policies → rollout evaluation and latency measurement.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered" data-i18n="architectures_title">Student Policy Architectures</h2>
+        <div class="content has-text-justified">
+          <p data-i18n="architectures_text">
+            Four student policy families were implemented and compared. MLP-BC provides a simple and fast deterministic baseline, GRU-BC introduces recurrent temporal modeling, Transformer-BC uses attention-based sequence modeling, and Flow Matching explores few-step generative action prediction.
+          </p>
+        </div>
+        <div class="columns is-multiline architecture-grid">
+          <div class="column is-half">
+            <div class="architecture-card">
+              <h3 class="title is-5">MLP-BC</h3>
+              <img class="zoomable-image" src="static/images/mlp_bc_architecture.svg" data-full="" alt="MLP-BC architecture">
+              <p data-i18n="mlp_caption">A lightweight behavior-cloning baseline that flattens observation history and predicts an action chunk with fully connected layers.</p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="architecture-card">
+              <h3 class="title is-5">GRU-BC</h3>
+              <img class="zoomable-image" src="static/images/gru_bc_architecture.svg" data-full="static/images/gru_bc_architecture.svg" alt="GRU-BC architecture">
+              <p data-i18n="gru_caption">A recurrent student policy designed to capture temporal dependencies in observation sequences.</p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="architecture-card">
+              <h3 class="title is-5">Transformer-BC</h3>
+              <img class="zoomable-image" src="static/images/transformer_bc_architecture.svg" data-full="static/images/transformer_bc_architecture.svg" alt="Transformer-BC architecture">
+              <p data-i18n="transformer_caption">An attention-based student policy for sequence modeling and action chunk prediction.</p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="architecture-card">
+              <h3 class="title is-5">Flow Matching</h3>
+              <img class="zoomable-image" src="static/images/flow_matching_architecture.svg" data-full="static/images/flow_matching_architecture.svg" alt="Flow Matching student architecture">
+              <p data-i18n="fm_caption">A few-step generative student that learns a velocity field from a source action prior to the teacher action distribution.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered" data-i18n="tasks_title">Experimental Tasks</h2>
+        <div class="content has-text-justified">
+          <p data-i18n="tasks_text">
+            Experiments were conducted on three robotic manipulation tasks with different control characteristics: Push-T for low-dimensional planar pushing, Lift-PH for grasping and lifting, and Square-PH for more precise manipulation and alignment.
+          </p>
+        </div>
+        <div class="columns is-multiline task-grid">
+          <div class="column is-one-third">
+            <div class="task-card">
+              <video class="site-video task-demo-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/pusht_teacher_demo.mp4" type="video/mp4">
+              </video>
+              <h3 class="title is-5">Push-T</h3>
+              <p data-i18n="pusht_desc">Low-dimensional planar pushing task.</p>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="task-card">
+              <video class="site-video task-demo-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/lift_ph_teacher_demo.mp4" type="video/mp4">
+              </video>
+              <h3 class="title is-5">Lift-PH</h3>
+              <p data-i18n="lift_desc">Basic grasping and lifting task.</p>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="task-card">
+              <video class="site-video task-demo-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/square_ph_teacher_demo.mp4" type="video/mp4">
+              </video>
+              <h3 class="title is-5">Square-PH</h3>
+              <p data-i18n="square_desc">Precise manipulation, alignment, and placement task.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="results">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered" data-i18n="results_title">Main Results</h2>
+        <div class="content has-text-justified">
+          <p data-i18n="results_intro">
+            Student policies significantly reduced action generation latency while showing task-dependent behavior preservation. The main result is that inference speed was improved by approximately 285×, but preserving the teacher policy's behavior remained the key bottleneck.
+          </p>
+        </div>
+
+        <div class="columns has-text-centered metrics-row">
+          <div class="column">
+            <div class="metric-card">
+              <div class="metric-number">682.25 ms</div>
+              <div class="metric-label" data-i18n="metric_teacher">Teacher latency</div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="metric-card">
+              <div class="metric-number">2.39 ms</div>
+              <div class="metric-label" data-i18n="metric_student">Average student latency</div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="metric-card">
+              <div class="metric-number">≈285×</div>
+              <div class="metric-label" data-i18n="metric_speedup">Overall speedup</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="three-line-table">
+            <thead>
+              <tr>
+                <th data-i18n="table_task">Task</th>
+                <th data-i18n="table_best_student">Best Student</th>
+                <th data-i18n="table_score">Score</th>
+                <th data-i18n="table_retention">Retained Teacher Score</th>
+                <th data-i18n="table_speedup">Speedup</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lift-PH</td>
+                <td>GRU-BC</td>
+                <td>0.760</td>
+                <td>76.0%</td>
+                <td>374.7×</td>
+              </tr>
+              <tr>
+                <td>Push-T</td>
+                <td>FM BC-Prior(MLP) 1-step</td>
+                <td>0.174</td>
+                <td>19.1%</td>
+                <td>223.9×</td>
+              </tr>
+              <tr>
+                <td>Square-PH</td>
+                <td>Transformer-BC</td>
+                <td>0.240</td>
+                <td>25.0%</td>
+                <td>297.0×</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="table-caption" data-i18n="table_caption">Retained teacher score is computed as the best student score divided by the teacher score on the same task. Speedup is computed as teacher latency divided by student latency.</p>
+        </div>
+
+        <div class="columns is-multiline result-figures">
+          <div class="column is-half">
+            <figure class="image project-figure">
+              <img class="zoomable-image" src="static/images/result_latency_logscale.png" alt="Inference latency comparison on a logarithmic scale">
+              <figcaption class="table-caption" data-i18n="latency_caption">Inference latency comparison. A logarithmic scale is recommended because the teacher is hundreds of milliseconds while students are only a few milliseconds.</figcaption>
+            </figure>
+          </div>
+          <div class="column is-half">
+            <figure class="image project-figure">
+              <img class="zoomable-image" src="static/images/result_retained_score.png" alt="Retained teacher score comparison">
+              <figcaption class="table-caption" data-i18n="score_caption">Retained teacher score comparison across tasks and student policy families.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered" data-i18n="findings_title">Model Strengths and Findings</h2>
+        <div class="table-wrapper">
+          <table class="three-line-table">
+            <thead>
+              <tr>
+                <th data-i18n="method_col">Method</th>
+                <th data-i18n="strength_col">Strength</th>
+                <th data-i18n="limitation_col">Limitation</th>
+                <th data-i18n="best_case_col">Best suited case</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>MLP-BC</td>
+                <td data-i18n="mlp_strength">Fast and simple deterministic baseline.</td>
+                <td data-i18n="mlp_limit">Limited temporal modeling ability.</td>
+                <td data-i18n="mlp_case">Latency baseline.</td>
+              </tr>
+              <tr>
+                <td>GRU-BC</td>
+                <td data-i18n="gru_strength">Stable recurrent temporal modeling.</td>
+                <td data-i18n="gru_limit">Less expressive than generative students.</td>
+                <td>Lift-PH</td>
+              </tr>
+              <tr>
+                <td>Transformer-BC</td>
+                <td data-i18n="transformer_strength">Attention-based sequence modeling.</td>
+                <td data-i18n="transformer_limit">Slightly higher latency than simpler students.</td>
+                <td>Square-PH</td>
+              </tr>
+              <tr>
+                <td>Flow Matching</td>
+                <td data-i18n="fm_strength">Few-step generative action prediction.</td>
+                <td data-i18n="fm_limit">Unstable in precise manipulation under the current design.</td>
+                <td>Push-T</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="content has-text-justified takeaway-text">
+          <p data-i18n="findings_text">
+            Overall, the experiments suggest that different student architectures are suitable for different tasks. Few-step generative students showed potential in low-dimensional planar control, while GRU-BC and Transformer-BC were more stable in manipulation tasks requiring temporal modeling and precise control.
+          </p>
+        </div>
+      </div>
+    </section>
+
+<section class="section" id="rollout-videos">
+  <div class="container is-max-desktop">
+    <div class="section-heading">
+      <h2 class="title is-3" data-i18n="rollout_title">Teacher vs. Student Rollout Comparison</h2>
+      <p class="section-intro" data-i18n="rollout_intro">
+        The following videos compare the pretrained Diffusion Policy teacher with the best-performing student policy on each task.
+        They illustrate both the effectiveness and the remaining limitations of policy distillation.
+      </p>
+    </div>
+
+    <!-- Push-T -->
+    <div class="rollout-card">
+      <div class="rollout-card-header">
+        <div>
+          <h3 class="title is-4" data-i18n="pusht_task_title">Push-T</h3>
+          <p class="rollout-description" data-i18n="pusht_video_caption">
+            Best student: <strong>FM BC-Prior(MLP) 1-step</strong>.
+          </p>
+        </div>
+        <span class="task-tag" data-i18n="pusht_task_tag">Planar pushing</span>
+      </div>
+
+      <div class="video-comparison-grid">
+        <div class="video-panel">
+          <div class="video-panel-title" data-i18n="teacher_label">Teacher</div>
+          <video class="site-video comparison-video" autoplay muted loop playsinline preload="metadata">
+            <source src="static/videos/pusht_teacher.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="video-panel">
+          <div class="video-panel-title" data-i18n="best_student_label">Best Student</div>
+          <video class="site-video comparison-video" autoplay muted loop playsinline preload="metadata">
+            <source src="static/videos/pusht_student.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lift-PH -->
+    <div class="rollout-card">
+      <div class="rollout-card-header">
+        <div>
+          <h3 class="title is-4" data-i18n="lift_task_title">Lift-PH</h3>
+          <p class="rollout-description" data-i18n="lift_video_caption">
+            Best student: <strong>GRU-BC</strong>.
+          </p>
+        </div>
+        <span class="task-tag" data-i18n="lift_task_tag">Grasping and lifting</span>
+      </div>
+
+      <div class="video-comparison-grid">
+        <div class="video-panel">
+          <div class="video-panel-title" data-i18n="teacher_label">Teacher</div>
+          <video class="site-video comparison-video" autoplay muted loop playsinline preload="metadata">
+            <source src="static/videos/lift_ph_teacher.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="video-panel">
+          <div class="video-panel-title" data-i18n="best_student_label">Best Student</div>
+          <video class="site-video comparison-video" autoplay muted loop playsinline preload="metadata">
+            <source src="static/videos/lift_ph_student.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Square-PH -->
+    <div class="rollout-card">
+      <div class="rollout-card-header">
+        <div>
+          <h3 class="title is-4" data-i18n="square_task_title">Square-PH</h3>
+          <p class="rollout-description" data-i18n="square_video_caption">
+            Best student: <strong>Transformer-BC</strong>.
+          </p>
+        </div>
+        <span class="task-tag" data-i18n="square_task_tag">Precise manipulation</span>
+      </div>
+
+      <div class="video-comparison-grid">
+        <div class="video-panel">
+          <div class="video-panel-title" data-i18n="teacher_label">Teacher</div>
+          <video class="site-video comparison-video" autoplay muted loop playsinline preload="metadata">
+            <source src="static/videos/square_ph_teacher.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="video-panel">
+          <div class="video-panel-title" data-i18n="best_student_label">Best Student</div>
+          <video class="site-video comparison-video" autoplay muted loop playsinline preload="metadata">
+            <source src="static/videos/square_ph_student.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered" data-i18n="discussion_title">Discussion and Limitations</h2>
+        <div class="content has-text-justified">
+          <p data-i18n="discussion_text">
+            The results indicate that policy distillation can effectively reduce the inference latency of Diffusion Policy, but preserving the teacher policy's behavior remains challenging. The current experiments were mainly conducted with limited rollout repetitions, and some conclusions should therefore be interpreted as descriptive trends rather than strict statistical claims. Future work may improve prior design for Flow Matching, strengthen the expressive capacity of student models, evaluate more acceleration methods, and extend the framework to real robotic systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered" data-i18n="materials_title">Project Materials</h2>
+        <div class="content has-text-justified">
+          <p data-i18n="materials_text">
+            Supplementary materials, including implementation details, experimental tables, and rollout videos, will be organized in the project repository and linked from this page.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p data-i18n="footer_project">This page presents my bachelor's thesis project at Dalian University of Technology.</p>
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id="image-viewer" class="image-viewer" aria-hidden="true">
+  <button class="image-viewer-close" type="button" aria-label="Close image viewer">×</button>
+  <div class="image-viewer-toolbar">
+    <button type="button" id="zoom-out">−</button>
+    <button type="button" id="zoom-reset">Reset</button>
+    <button type="button" id="zoom-in">＋</button>
+  </div>
+  <img id="image-viewer-img" src="" alt="">
+</div>
+</body>
+</html>
